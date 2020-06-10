@@ -1,7 +1,6 @@
-# lando-templates
-A set of YAML file templates to reference when when using Lando with Drupal, Wordpress, and other platforms with additional services like PHPMyAdmin and Redis.
+# Lando Templates
 
-This repository was created to store templates to reference when getting started on new Drupal projects, Wordpress projects, or other development projects using Lando for local development.
+This repository provides set of YAML file templates and code snippets to reference when configuring Lando for use with Drupal, Wordpress, and other web platforms. It can also be used to configure additional services and tools like PHPMyAdmin, Redis, Solr, Behat, Codesniffer, and Mailhog. Additional info on all topics covered in this repo can be found in the [Lando Config Docs](https://docs.lando.dev/config/lando.html#base-file).
 
 **Note:** To get started setting up the `.lando.yml` config file for new Lando app just run the following command and follow the prompts on your screen.
 
@@ -45,13 +44,9 @@ Typically we try to use the [stage_file_proxy module](https://www.drupal.org/pro
 
     lando pull --files=none
 
-**Note:** Lando will not find the pantheon site you are trying to pull if you are missing form the Team page as a Team Member.
+**Note:** Lando will not find the pantheon site you are trying to pull if you are missing form the project's Team page as a Team Member. Being a member of a Supporting Organization is not currently supported by Terminus.
 
 ### Linode/Other Hosts
 Linode and other hosting solutions do not have baked in tools to get the DB, so you will need to get a DB dump and import it with the following command inside the lando app directory.
 
     lando db-import DB-NAME.sql
-
-
-Not a fan of Lando for local development? No problem! Check out our DDEV Templates repository instead.
-
