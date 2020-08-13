@@ -1,16 +1,20 @@
 # Redis Lando Templates
 
-## Common Redis Configuration
+## Typical Redis Configuration
+Redis is configured in the services section and specific versions can be defined.
+
+Redis 5 is the currently defined default version in Lando.
+
+The below example will install Redis 4.
 
 ```
 services:
   redis:
-    type: redis
+    type: redis:4
     portforward: true
 ```
 
 ## Custom Redis Configuration File
-
 Define a custom redis configuration file.
 
 ```

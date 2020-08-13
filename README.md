@@ -13,7 +13,8 @@ This repository has full templates available and code snippets available for var
 - Wordpress
 - LAMP (Debian Stretch)
 - Services (mailhog, mariadb, mysql, php, phpmyadmin, redis, solr, varnish)
-
+- Events
+- Tooling
 
 Once you have the .lando.yml file setup like you want run the following command to restart your Lando app.
 
@@ -50,3 +51,17 @@ Typically we try to use the [stage_file_proxy module](https://www.drupal.org/pro
 Linode and other hosting solutions do not have baked in tools to get the DB, so you will need to get a DB dump and import it with the following command inside the lando app directory.
 
     lando db-import DB-NAME.sql
+
+
+## Custom URLs and Ports
+Lando will configure most services with default ports and use your localhost when no Proxy URLs are defined. Configure a custom URL by defining a proxy for a defined service.
+
+The example below sets a custom URL for the mailhog service at http://mail.my.lndo.site.
+
+```
+proxy:
+  mailhog:
+    - mail.my.lndo.site
+```
+
+

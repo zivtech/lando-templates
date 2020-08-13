@@ -12,7 +12,7 @@ services:
   nodejs:
     type: node
     build:
-      - "cd $LANDO_MOUNT/web/themes/custom/starterkit && npm install"
+      - "cd $LANDO_MOUNT/web/themes/custom/starterlight && npm install"
     globals:
       gulp-cli: latest
 ```
@@ -27,7 +27,7 @@ services:
   nodejs:
     type: node:8
     build:
-      - "cd $LANDO_MOUNT/web/themes/custom/starterkit && npm install"
+      - "cd $LANDO_MOUNT/web/themes/custom/starterlight && npm install"
     globals:
       gulp-cli: latest
 ```
