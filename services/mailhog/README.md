@@ -1,5 +1,4 @@
 # Mailhog Lando Templates
-
 Mailhog captures mail sent by the web server and allows for viewing mail locally.
 
 
