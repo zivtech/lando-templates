@@ -6,6 +6,16 @@ See https://docs.lando.dev/config/events.html for all available events and addit
 
 ## Typical Events Configuration
 
+### Pre Start
+The `pre-start` event runs prior to starting the Lando containers when you run `lando start` or `lando rebuild`.
+
+```
+events:
+  pre-start:
+    - appserver: composer require drupal/coder phpcompatibility/php-compatibility
+    - appserver: composer install
+```
+
 ### Post Pull
 The `post-pull` event runs after you run `git pull`.
 
